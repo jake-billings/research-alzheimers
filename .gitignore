@@ -99,3 +99,9 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+.idea
+
+# Project-specific
+data/external_raw/*
+data/external_normalized/*
