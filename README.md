@@ -24,8 +24,12 @@ If scripts share code that should be abstracted, we should develop a pattern for
 
 ### Processing ###
 1. Collect gif images from OASIS database
+
 ![Cool gifs](imgs/screenshot_gifs.png)
-1. Crop oasis gif images
+
+2. Crop oasis gif images
+
 ![Cool Neurons](data/performance_statistics/demo_cropping_1.png)
 ![Cool Neurons](data/performance_statistics/demo_cropping_2.png)
-1. Resize images
+
+3. Resize images
