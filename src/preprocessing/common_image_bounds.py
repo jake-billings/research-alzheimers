@@ -50,8 +50,8 @@ def show_plot_with_bounds_for_image(image):
     left, bottom, right, top = get_bounds_for_image(image, threshold=50)
 
     xy = (left, bottom)
-    width = right-left
-    height = top-bottom
+    width = right - left
+    height = top - bottom
 
     plt.imshow(image)
 
@@ -64,8 +64,10 @@ def show_plot_with_bounds_for_image(image):
 
 # Demos the bounds function by applying it to the first image in the SOURCE dataset
 def demo_bounds():
-    files = list_files(SOURCE, EXTENSION,result_cap=1)
-    image = io.imread(files[0])
+    files = list_files(SOURCE, EXTENSION, result_cap=100)
+    i = 0
+    image = io.imread(files[i])
+    plt.figure(i)
     show_plot_with_bounds_for_image(image)
 
 

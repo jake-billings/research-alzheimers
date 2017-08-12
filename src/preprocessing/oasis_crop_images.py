@@ -12,7 +12,7 @@ EXTENSION = '.gif'
 DEST = '../../data/external_raw/gifs_cropped'
 SAVE_FORMAT = 'png'
 SAVE_EXTENSION = '.' + SAVE_FORMAT
-THRESHOLD = 50
+THRESHOLD = 100
 
 
 # Loads image from a path and returns a cropped scikit-image (2D matrix indexed [y, x])
@@ -38,24 +38,33 @@ def crop_oasis_images():
     # Get the list of files from the source data
     files = list_files(SOURCE, EXTENSION)
 
+    i = 0
+
     # Iterate over each file path
     for f in files:
 
         # Load and crop the image at path f
-        cropped_image = load_and_crop_image(f)
+        try:
+            print i, f
 
-        # Assign a path for saving. We need to move it from source to dest,
-        # so do some path replacement
-        save_path = f.replace(SOURCE, DEST).replace(EXTENSION, SAVE_EXTENSION)
+            cropped_image = load_and_crop_image(f)
 
-        # Save the new cropped image
-        plt.imsave(save_path, cropped_image, cmap=plt.cm.gray, format=SAVE_FORMAT)
+            # Assign a path for saving. We need to move it from source to dest,
+            # so do some path replacement
+            save_path = f.replace(SOURCE, DEST).replace(EXTENSION, SAVE_EXTENSION)
+
+            i += 1
+
+            # Save the new cropped image
+            plt.imsave(save_path, cropped_image, cmap=plt.cm.grey, format=SAVE_FORMAT)
+        except Exception:
+            print 'Problem cropping', f
 
 
 # Crops all images in the oasis data set based on the global SOURCE and DEST parameters
 def demo_plot_cropped_image():
     # Get the list of files from the source data
-    files = list_files(SOURCE, EXTENSION,result_cap=1)
+    files = list_files(SOURCE, EXTENSION, result_cap=1)
 
     # Crop the first image
     cropped_image = load_and_crop_image(files[0])
