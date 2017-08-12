@@ -9,8 +9,10 @@ import os, shutil
 # limit This is a safety in case you accidentally point this function at '/'. You must manually increase this to
 #       search through more than 10,000 files. Note, this applies to how many files you search NOT how many are
 #       returned.
+# result_cap This is the maximum number of results to return. If this many results are found, break and return the list\
+#            Default: 1,000,0000
 # ignore_files_beginning_with_dot This option is used to conveniently ignore '._' files of which there are many.
-def list_files_in_subdirectories_by_extension(root, extension, limit=10000, ignore_files_beginning_with_dot=True):
+def list_files_in_subdirectories_by_extension(root, extension, limit=10000, result_cap=1000000, ignore_files_beginning_with_dot=True):
     # Initialize a buffer to store the files when we find them
     files = []
 
@@ -28,8 +30,16 @@ def list_files_in_subdirectories_by_extension(root, extension, limit=10000, igno
         # Increment the safety counter
         i += 1
 
+        # Break this for loop if we're above the cap
+        if len(files) >= result_cap:
+            break
+
         # For all the files in this directory, check if it matches search criteria, and add it to the buffer if it does
         for name in dir_files:
+            # Break this for loop if we're above the cap
+            if len(files) >= result_cap:
+                break
+
             # Apply search criteria (see function docs) and store the file's full path if it matches them
             if ((not ignore_files_beginning_with_dot) or (name[0] != '.')) and (extension in name):
                 files.append(os.path.join(path, name))
