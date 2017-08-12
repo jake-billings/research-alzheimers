@@ -33,3 +33,4 @@ If scripts share code that should be abstracted, we should develop a pattern for
 ![Cool Neurons](data/performance_statistics/demo_cropping_2.png)
 
 3. Resize images
+![Cool Stats](data/performance_statistics/mean_std_width_height.png)
