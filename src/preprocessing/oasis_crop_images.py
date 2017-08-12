@@ -33,8 +33,8 @@ def load_and_crop_image(path):
     return cropped_image
 
 
-# Crops all images in the OAISIS data set based on the global SOURCE and DEST parameters
-def crop_oaisis_images():
+# Crops all images in the oasis data set based on the global SOURCE and DEST parameters
+def crop_oasis_images():
     # Get the list of files from the source data
     files = list_files(SOURCE, EXTENSION)
 
@@ -52,7 +52,7 @@ def crop_oaisis_images():
         plt.imsave(save_path, cropped_image, cmap=plt.cm.gray, format=SAVE_FORMAT)
 
 
-# Crops all images in the OAISIS data set based on the global SOURCE and DEST parameters
+# Crops all images in the oasis data set based on the global SOURCE and DEST parameters
 def demo_plot_cropped_image():
     # Get the list of files from the source data
     files = list_files(SOURCE, EXTENSION,result_cap=1)
@@ -66,4 +66,4 @@ def demo_plot_cropped_image():
 
 
 if __name__ == '__main__':
-    crop_oaisis_images()
+    crop_oasis_images()
