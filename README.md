@@ -6,6 +6,7 @@ This repository contains a machine learning algorithm that will be used to predi
 - Gunnar Enserro
 - Shaun Keys
 
+![Cool Neurons](data/performance_statistics/experiment_cropped_dimensions.png)
 
 ## Contributing ##
 Since we will be publishing the research, it is our responsibility to write clean, concise code that makes it easy for our peers to review our work. As a result, it is mandatory that we run a linter, such as the one built in to the PyCharm IDE. It is also necessary to document our code in English so that readers do not need to learn our syntax. In other words, we need to write good code. Code must also be well-documented and have decent user experience so that users can recreate our results.
@@ -20,3 +21,11 @@ If scripts share code that should be abstracted, we should develop a pattern for
 
 ## Architecture ##
 ![Architecture](imgs/Architecture.png)
+
+### Processing ###
+1. Collect gif images from OASIS database
+![Cool gifs](imgs/screenshot_gifs.png)
+1. Crop oasis gif images
+![Cool Neurons](data/performance_statistics/demo_cropping_1.png)
+![Cool Neurons](data/performance_statistics/demo_cropping_2.png)
+1. Resize images
