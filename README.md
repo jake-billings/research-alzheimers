@@ -32,9 +32,16 @@ If scripts share code that should be abstracted, we should develop a pattern for
 ![Cool Neurons](data/performance_statistics/demo_cropping_1.png)
 ![Cool Neurons](data/performance_statistics/demo_cropping_2.png)
 
-3. Resize images
-![Cool Stats](data/performance_statistics/mean_std_width_height.png)
+4. Sort images by type (cor, sag, and tra)
+![Cool Stats](imgs/screenshot_sorting.png)
 
-### DataBase Used ###
+5. Resize images to the mean size within their type
+![Cool Stats](data/performance_statistics/mean_std_width_height.png)
+![Cool Neurons](data/performance_statistics/experiment_cropped_dimensions.png)
+
+6. Sort into training/positive, training/negative, test/positive, and test/negative.
+![Cool Data](data/performance_statistics/experiment_patient_data.png)
+
+## Source Database ##
 http://www.oasis-brains.org/app/template/Index.vm
 P50 AG05681, P01 AG03991, R01 AG021910, P20 MH071616, U24 RR021382
