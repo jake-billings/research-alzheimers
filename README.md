@@ -34,6 +34,7 @@ If scripts share code that should be abstracted, we should develop a pattern for
 ![Cool Neurons](data/performance_statistics/demo_cropping_2.png)
 
 4. Sort images by type (cor, sag, and tra)
+
 ![Cool Stats](imgs/screenshot_sorting.png)
 
 5. Resize images to the mean size within their type
