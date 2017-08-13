@@ -30,6 +30,7 @@ If scripts share code that should be abstracted, we should develop a pattern for
 2. Crop oasis gif images
 
 ![Cool Neurons](data/performance_statistics/demo_cropping_1.png)
+
 ![Cool Neurons](data/performance_statistics/demo_cropping_2.png)
 
 4. Sort images by type (cor, sag, and tra)
@@ -37,6 +38,7 @@ If scripts share code that should be abstracted, we should develop a pattern for
 
 5. Resize images to the mean size within their type
 ![Cool Stats](data/performance_statistics/mean_std_width_height.png)
+
 ![Cool Neurons](data/performance_statistics/experiment_cropped_dimensions.png)
 
 6. Sort into training/positive, training/negative, test/positive, and test/negative.
