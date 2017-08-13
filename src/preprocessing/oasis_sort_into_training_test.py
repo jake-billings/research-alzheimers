@@ -33,7 +33,7 @@ def find_subject_by_identifier(identifier):
 
 
 for SOURCE, DEST in zip(SOURCES, DESTS):
-    files = list_files(SOURCE, EXTENSION, result_cap=100)
+    files = list_files(SOURCE, EXTENSION)
 
     positive = []
     negative = []
@@ -43,14 +43,14 @@ for SOURCE, DEST in zip(SOURCES, DESTS):
     positive_test = []
     negative_test = []
 
-    for file in files:
-        subject_identifier = '_'.join(file.split('/')[-1].split('_')[0:3])
+    for f in files:
+        subject_identifier = '_'.join(f.split('/')[-1].split('_')[0:3])
         subject = find_subject_by_identifier(subject_identifier)
         subject_has_ad = subject.cdr > AD_THRESHOLD
         if subject_has_ad:
-            positive.append(file)
+            positive.append(f)
         else:
-            negative.append(file)
+            negative.append(f)
 
     for f in positive:
         if random() < PROB_ASSIGN_TRAINING:
