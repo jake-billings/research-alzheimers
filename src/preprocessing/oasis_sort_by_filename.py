@@ -23,4 +23,4 @@ for f in files:
 
 copy_files(cor, DEST+'/gifs_cropped_cor')
 copy_files(sag, DEST+'/gifs_cropped_sag')
-copy_files(sag, DEST+'/gifs_cropped_tra')
+copy_files(tra, DEST+'/gifs_cropped_tra')
