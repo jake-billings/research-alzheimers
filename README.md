@@ -9,6 +9,8 @@ This repository contains a machine learning algorithm that will be used to predi
 ![Cool Neurons](data/performance_statistics/experiment_cropped_dimensions.png)
 
 ## Contributing ##
+![Downloading TensorFlow because I have no life](imgs/screenshot_pip_install_tensorflow.png)
+
 Since we will be publishing the research, it is our responsibility to write clean, concise code that makes it easy for our peers to review our work. As a result, it is mandatory that we run a linter, such as the one built in to the PyCharm IDE. It is also necessary to document our code in English so that readers do not need to learn our syntax. In other words, we need to write good code. Code must also be well-documented and have decent user experience so that users can recreate our results.
 
 We should create a guide for how to use our code to process data, train networks, and predict Alzheimer's disease.
@@ -42,8 +44,14 @@ If scripts share code that should be abstracted, we should develop a pattern for
 
 ![Cool Neurons](data/performance_statistics/experiment_cropped_dimensions.png)
 
-6. Sort into training/positive, training/negative, test/positive, and test/negative.
 ![Cool Data](data/performance_statistics/experiment_patient_data.png)
+
+6. Sort into training/positive, training/negative, test/positive, and test/negative using random decisions and patient data.
+
+7. Train the Keras neural network
+
+![Training on kera because I have no freinds](imgs/screenshot_keras_training_epoch_1.png)
+
 
 ## Source Database ##
 http://www.oasis-brains.org/app/template/Index.vm
