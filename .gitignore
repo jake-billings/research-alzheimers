@@ -105,5 +105,6 @@ ENV/
 # Project-specific
 data/external_raw/*
 data/external_normalized/*
+data/trained_networks/test_*
 
 .DS_Store
