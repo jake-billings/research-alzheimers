@@ -15,12 +15,20 @@ from keras import backend as K
 # dimensions of our images.
 img_width, img_height = 150, 150
 
-train_data_dir = '../../data/external_normalized/oasis/cor'
-validation_data_dir = '../../data/external_normalized/oasis/cor'
+dataset = 'oasis'
+data_type = 'cor'
+
+train_data_dir = '../../data/external_normalized/%s/%s' % (dataset, data_type)
+validation_data_dir = '../../data/external_normalized/%s/%s' % (dataset, data_type)
 nb_train_samples = 2000
 nb_validation_samples = 800
-epochs = 1
+epochs = 50
 batch_size = 16
+
+network_name = 'test_first_try'
+
+save_path = '../../data/trained_networks/%s_%s_%s_%s_epochs.h5' % (network_name, dataset, data_type, epochs)
+print 'Will save network to path: ', save_path
 
 if K.image_data_format() == 'channels_first':
     input_shape = (3, img_width, img_height)
@@ -81,4 +89,4 @@ model.fit_generator(
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size)
 
-model.save_weights('../../data/trained_networks/text_first_try.h5')
+model.save_weights(save_path)
