@@ -81,4 +81,4 @@ model.fit_generator(
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size)
 
-model.save_weights('../../data/trained_networks/first_try.h5')
+model.save_weights('../../data/trained_networks/text_first_try.h5')
