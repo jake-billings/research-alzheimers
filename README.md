@@ -4,7 +4,7 @@
 
 This repository contains a machine learning algorithm that will be used to predict whether or not patients have Alzheimer's disease.
 
-### A brief note on copyright###
+### A brief note on copyright ###
 Until this research is complete, we'd like a little bit of control over it's distribution, so it is under propriary license. Once the research is complete, we intend to release everything under MIT license. However, until then, this repository is COPYRIGHT JAKE BILLINGS AND GUNNAR ENSERO. ALL RIGHTS RESERVED.
 
 ## Team ##
