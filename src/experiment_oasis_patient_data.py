@@ -49,4 +49,5 @@ draw_plot_for_freq_data('Ages', ages, 101, 221, int(min(ages)), int(max(ages)))
 # CDR
 cdrs = sorted([subject.cdr for subject in subjects])
 draw_plot_for_freq_data('CDR', cdrs, 101, 223, int(min(cdrs)), int(max(cdrs)), overscan=1, step=0.5)
+
 plt.show()
